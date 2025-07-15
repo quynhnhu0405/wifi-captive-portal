@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Landing Page Step</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/7011aa09f0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="page-container">
+        <header class="header">
+            <a href="https://u444.vn">
+                <img src="assets/images/logo.png" alt="Logo" id="logo" />
+            </a>
+            <a href="https://u444.vn">
+                <ion-icon name="apps"></ion-icon>
+            </a>
+        </header>
+        <main class="step-container">
+            <div class="lang-switch">
+                <i class="fa-solid fa-globe"></i>
+                <button class="lang-btn ">vie</button>
+                <span class="divider">|</span>
+                <button class="lang-btn active">eng</button>
+            </div>
+            <!-- Step 1: Language Selection -->
+            <section class="step" data-step="1">
+                <p id="lang-title">Language/ Ngôn ngữ</p>
+                <div class="btn-group">
+                    <button class="lang-btn" data-lang="en">ENGLISH</button>
+                    <button class="lang-btn" data-lang="vi">TIẾNG VIỆT</button>
+                </div>
+                <button class="confirm" id="confirm-lang">Confirm and continue with internet access</button>
+            </section>
+
+            <!-- Step 2: Gender Selection -->
+            <section class="step hidden" data-step="2">
+                <p id="gender-title">Gender – Please select your gender</p>
+                <div class="btn-group">
+                    <button data-value="male" class="gender-btn">MALE</button>
+                    <button data-value="female" class="gender-btn">FEMALE</button>
+                </div>
+                <button class="confirm" id="confirm-gender">Confirm and continue</button>
+            </section>
+
+            <!-- Step 3: Birth Year -->
+            <section class="step hidden" data-step="3">
+                <p id="birth-title">Please enter your year of birth</p>
+                <input type="number" placeholder="*YOUR BIRTH YEAR" id="birth-input" />
+                <p class="note hidden">* Please enter your birth year.</p>
+                <button class="confirm" id="confirm-birth">Confirm and finish</button>
+            </section>
+        </main>
+        <div class="space">
+        </div>
+
+        <footer>
+            <p>@ 2025 - U444 - All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="Utils/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

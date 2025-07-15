@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #FCF3DF;
+    color: #222;
+    height: 100%;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    min-height: 100vh;
+}
+
+/* Layout */
+.step-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #DB4C26;
+    padding: 2.5rem;
+    border-radius: 20px;
+    color: #fff;
+    flex: 0;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+
+.step em {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Button group */
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+}
+
+button {
+    padding: 0.5rem;
+    text-align: center;
+    border: 1.5px solid #fff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.85rem;
+    border-radius: 1px;
+    width: 50%;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #DB4C26;
+}
+
+.confirm {
+    width: 100%;
+}
+
+/* Input */
+input[type="number"] {
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white !important;
+    margin-top: 3rem;
+    margin-bottom: 5.5rem;
+}
+
+input[type="number"]::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-bottom: 1px solid white;
+}
+
+.hidden {
+    display: none;
+}
+
+#lang-title,
+#gender-title,
+#birth-title {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+.header {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header #logo {
+    width: 3.5rem;
+    cursor: pointer;
+}
+
+.header .icon-grid {
+    font-size: 2rem;
+}
+
+ion-icon {
+    color: #DB4C26;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.lang-switch {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    gap: 8px;
+    color: white;
+}
+
+.lang-switch i {
+    color: white;
+    font-size: 1rem;
+}
+
+.lang-switch .lang-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 0.8rem;
+    cursor: pointer;
+    opacity: 0.5;
+    font-weight: normal;
+    width: fit-content;
+    padding: 0;
+}
+
+.lang-btn.active {
+    opacity: 1;
+}
+
+.step .lang-btn.active {
+    background-color: #fff;
+    color: #DB4C26;
+}
+
+.gender-btn.active {
+    background-color: #fff;
+    color: #DB4C26;
+}
+
+.divider {
+    color: white;
+    opacity: 0.5;
+}
+
+main {
+    flex: 1;
+}
+
+.space {
+    flex: 1;
+}
+
+footer {
+    padding: 16px 0;
+    font-size: 14px;
+    color: #DB4C26;
+    border-top: 1px solid #DB4C26;
+}
+
+.step em {
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+}
+.note
+{
+    margin-bottom: 1rem;
+}
