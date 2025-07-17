@@ -124,8 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
     wifiService.submitCustomerInfo(payload)
       .then((res) => {
         console.log("Submitted successfully:", res.data);
-        alert("Submitted successfully!");
-        //window.location.href = "https://u444.vn";
+        window.location.href = "https://u444.vn";
       })
       .catch((err) => {
         console.error("Submission failed:", err);
