@@ -66,23 +66,42 @@ button:hover {
 
 .confirm {
     width: 100%;
+    font-weight: 700;
 }
 
 /* Select */
-select {
-    width: 100%;
-    padding: 0.7rem;
-    font-size: 1rem;
-    border: none;
-    border-bottom: 1px solid white;
-    border-radius: 5px;
-    background-color: transparent;
+.choices__inner {
+    width: 100% !important;
+    padding: 0.7rem !important;
+    font-size: 1rem !important;
+    border: none !important;
+    border-bottom: 1px solid white !important;
+    border-radius: 5px !important;
+    background-color: transparent !important;
     color: white !important;
-    margin-top: 3rem;
-    margin-bottom: 5.5rem;
 }
-#birth-select option {
-    color: #222;
+.choices__item--selectable
+{
+    color: rgb(255, 255, 255) !important;
+}
+.choices__item--choice
+{
+    color: rgb(0, 0, 0) !important;
+}
+.choices
+{
+    margin-top: 3rem !important;
+    margin-bottom: 5.5rem !important;
+}
+#birth-select
+{
+    color: #000 !important;
+}
+
+
+.choices__list--dropdown {
+    max-height: 200px;
+    overflow-y: auto;
 }
 
 .hidden {
@@ -181,7 +200,7 @@ footer {
     font-family: 'Playfair Display', serif;
     font-weight: 100;
 }
-.note
-{
+
+.note {
     margin-bottom: 1rem;
 }

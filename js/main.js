@@ -8,24 +8,24 @@ document.addEventListener("DOMContentLoaded", function () {
     en: {
       langTitle: "Language/ Ngôn ngữ",
       genderTitle: "Gender – Please select your gender",
-      birthTitle: "Please enter your birth year",
+      birthTitle: "Please choose your birth year",
       birthPlaceholder: "*YOUR BIRTH YEAR",
-      confirm: "Confirm and continue with internet access",
-      finish: "Confirm and continue with internet access",
+      confirm: " Continue to the Internet",
+      finish: " Connect to the Internet",
       male: "MALE",
       female: "FEMALE",
-      note: "* Please enter your birth year.",
+      note: "* Please choose your birth year",
     },
     vi: {
       langTitle: "Language/ Ngôn ngữ",
       genderTitle: "Vui lòng chọn giới tính của bạn",
-      birthTitle: "Vui lòng điền năm sinh của bạn",
+      birthTitle: "Vui lòng chọn năm sinh của bạn",
       birthPlaceholder: "*NĂM SINH CỦA BẠN",
-      confirm: "Xác nhận và tiếp tục truy cập internet",
-      finish: "Xác nhận và tiếp tục truy cập internet",
+      confirm: "Tiếp tục để truy cập internet",
+      finish: "Kết nối internet",
       male: "NAM",
       female: "NỮ",
-      note: "* Vui lòng nhập năm sinh.",
+      note: "* Vui lòng chọn năm sinh.",
     }
   };
 
@@ -155,4 +155,16 @@ document.addEventListener("DOMContentLoaded", function () {
     option.textContent = year;
     birthSelect.appendChild(option);
   }
+
+  // Initialize Choices.js
+  const birthChoices = new Choices(birthSelect, {
+    searchEnabled: false,
+    itemSelectText: '',
+    shouldSort: false,
+    position: 'auto',
+    placeholder: true,
+    placeholderValue: "*YOUR BIRTH YEAR",
+  });
+
+  document.head.appendChild(style);
 });
