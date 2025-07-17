@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("lang-title").innerText = t.langTitle;
     document.getElementById("gender-title").innerHTML = t.genderTitle;
     document.getElementById("birth-title").innerHTML = t.birthTitle;
-    document.getElementById("birth-input").placeholder = t.birthPlaceholder;
     document.getElementById("confirm-lang").innerText = t.confirm;
     document.getElementById("confirm-gender").innerText = t.confirm;
     document.getElementById("confirm-birth").innerText = t.finish;
@@ -104,13 +103,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.getElementById("confirm-birth").addEventListener("click", () => {
-    const birthInput = document.getElementById("birth-input");
-    const birthYear = birthInput.value.trim();
+    const birthSelect = document.getElementById("birth-select");
+    const birthYear = birthSelect.value;
     const note = document.querySelector(".step[data-step='3'] .note");
 
     if (!birthYear) {
       note.classList.remove("hidden");
-      birthInput.focus();
+      birthSelect.focus();
       return;
     }
 
@@ -140,4 +139,20 @@ document.addEventListener("DOMContentLoaded", function () {
       btn.classList.add("active");
     }
   });
+
+  const birthSelect = document.getElementById('birth-select');
+  const currentYear = new Date().getFullYear();
+  const minYear = 1900;
+
+  const defaultOption = document.createElement("option");
+  defaultOption.value = "";
+  defaultOption.textContent = "*YOUR BIRTH YEAR";
+  birthSelect.appendChild(defaultOption);
+
+  for (let year = currentYear; year >= minYear; year--) {
+    const option = document.createElement('option');
+    option.value = year;
+    option.textContent = year;
+    birthSelect.appendChild(option);
+  }
 });
