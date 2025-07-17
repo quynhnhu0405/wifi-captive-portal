@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("lang-title").innerText = t.langTitle;
     document.getElementById("gender-title").innerHTML = t.genderTitle;
     document.getElementById("birth-title").innerHTML = t.birthTitle;
-    // Không cần set placeholder vì giờ dùng <select>
     document.getElementById("confirm-lang").innerText = t.confirm;
     document.getElementById("confirm-gender").innerText = t.confirm;
     document.getElementById("confirm-birth").innerText = t.finish;
@@ -141,7 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Tạo danh sách năm trong select
   const birthSelect = document.getElementById('birth-select');
   const currentYear = new Date().getFullYear();
   const minYear = 1900;
